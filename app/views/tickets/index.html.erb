@@ -1,0 +1,23 @@
+<div class="container py-3">
+  <h2>Tickets</h2>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Subject</th>
+      <th scope="col">Requester</th>
+      <th scope="col">Requested</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @tickets.each do |ticket| %>
+        <tr>
+          <th scope="row"><%= ticket.subject %></th>
+          <td><%= ticket.requester_id %></td>
+          <td><%= ticket.submitter_id %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
